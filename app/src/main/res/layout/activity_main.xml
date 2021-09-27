@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/parent">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/imgView"/>
+
+    <TextView
+        android:layout_below="@id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App library"
+        android:textFontWeight="@integer/material_motion_duration_short_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:id="@+id/appText"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsLayout"
+        android:layout_below="@id/appText"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seeAllBooksBtn"
+            android:text="See all books"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_below="@id/seeAllBooksBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentlyReadingBooksBtn"
+            android:text="Currently reading books"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_below="@id/currentlyReadingBooksBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/alreadyReadBooksBtn"
+            android:text="Already read books"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_below="@id/alreadyReadBooksBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/youtWishlistBtn"
+            android:text="Your wishlist"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_below="@id/youtWishlistBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seeYourFavouritesBtn"
+            android:text="See Your Favourites"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_below="@id/seeYourFavouritesBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/about"
+            android:text="About"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Develop by Andrew Ershov"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonsLayout"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="italic"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
