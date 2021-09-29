@@ -5,16 +5,16 @@ public class Book {
     private String name;
     private String author;
     private int pages;
-    private String imageUrl;
+    private String imageUlr;
     private String shortDesc;
     private String longDesc;
 
-    public Book(int id, String name, String author, int pages, String imageUrl, String shortDesc, String longDesc) {
+    public Book(int id, String name, String author, int pages, String imageUlr, String shortDesc, String longDesc) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.pages = pages;
-        this.imageUrl = imageUrl;
+        this.imageUlr = imageUlr;
         this.shortDesc = shortDesc;
         this.longDesc = longDesc;
     }
@@ -25,8 +25,8 @@ public class Book {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
-                ", pages=" + pages +
-                ", imageUrl=" + imageUrl +
+                ", pages='" + pages + '\'' +
+                ", imageUlr='" + imageUlr + '\'' +
                 ", shortDesc='" + shortDesc + '\'' +
                 ", longDesc='" + longDesc + '\'' +
                 '}';
@@ -64,12 +64,12 @@ public class Book {
         this.pages = pages;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImageUlr() {
+        return imageUlr;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageUlr(String imageUlr) {
+        this.imageUlr = imageUlr;
     }
 
     public String getShortDesc() {

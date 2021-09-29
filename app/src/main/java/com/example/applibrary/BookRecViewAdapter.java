@@ -1,7 +1,6 @@
 package com.example.applibrary;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +18,8 @@ import java.util.ArrayList;
 
 public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.ViewHolder> {
 
-    private static  final  String TAG = "BookRecViewAdapter";
-    private ArrayList<Book> booksList = new ArrayList<Book>();
+    private static final String TAG = "BookRecViewAdapter";
+    private ArrayList<Book> books = new ArrayList<>();
     private Context mContext;
 
     public BookRecViewAdapter(Context mContext) {
@@ -31,17 +30,17 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_book, parent, false);
-        ViewHolder holder = new ViewHolder(view);
-        return holder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.textName.setText(booksList.get(position).getName());
+        holder.textName.setText(books.get(position).getName());
         Glide.with(mContext)
                 .asBitmap()
-                .load(booksList.get(position).getImageUrl())
-                .into(holder.imgView);
+                .load(books.get(position).getImageUlr())
+                .into(holder.imgBook);
+
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,25 +51,25 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
 
     @Override
     public int getItemCount() {
-        return booksList.size();
+        return books.size();
     }
 
-    public void setBooksList(ArrayList<Book> booksList) {
-        this.booksList = booksList;
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends  RecyclerView.ViewHolder{
-
+    public class ViewHolder extends RecyclerView.ViewHolder{
         private CardView parent;
-        private ImageView imgView;
+        private ImageView imgBook;
         private TextView textName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
-            imgView = itemView.findViewById(R.id.imgView);
-            textName = itemView.findViewById(R.id.bookNameText);
+            imgBook = itemView.findViewById(R.id.imgBook);
+            textName = itemView.findViewById(R.id.textBookName);
         }
     }
+
 }

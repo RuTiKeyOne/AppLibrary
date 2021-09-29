@@ -20,11 +20,13 @@ public class AllbooksActivity extends AppCompatActivity {
 
         adapter = new BookRecViewAdapter(this);
         booksRecView = findViewById(R.id.booksRecView);
+
         booksRecView.setAdapter(adapter);
-        booksRecView.setLayoutManager(new GridLayoutManager(this,2));
-        ArrayList<Book> books = new ArrayList<Book>();
-        books.add(new Book(1, "The fight club", "Chuck Palahniuk", 208, "https://cdn1.ozone.ru/s3/multimedia-8/wc1200/6008219528.jpg",
-                "Fight Club is a 1996 novel by Chuck Palahniuk.", "Long description"));
-        adapter.setBooksList(books);
+        booksRecView.setLayoutManager(new GridLayoutManager(this, 2));
+
+        ArrayList<Book> books = new ArrayList<>();
+        books.add(new Book(1, "The fight club", "Chuck Palahniuk", 208, "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+                "Fight Club is a 1996 novel by Chuck Palahniuk. It follows the experiences of an unnamed protagonist struggling with insomnia.", ""));
+        adapter.setBooks(books);
     }
 }
