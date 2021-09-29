@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllbooksActivity"
-    android:background="@color/teal_200">
+    tools:context=".AllbooksActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/booksRecView"/>
+        android:id="@+id/booksRecView"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     
 </androidx.constraintlayout.widget.ConstraintLayout>

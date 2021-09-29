@@ -8,6 +8,7 @@ public class Book {
     private String imageUlr;
     private String shortDesc;
     private String longDesc;
+    private boolean isExpanded;
 
     public Book(int id, String name, String author, int pages, String imageUlr, String shortDesc, String longDesc) {
         this.id = id;
@@ -17,6 +18,15 @@ public class Book {
         this.imageUlr = imageUlr;
         this.shortDesc = shortDesc;
         this.longDesc = longDesc;
+        isExpanded = false;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
+
+    public boolean isExpanded() {
+        return isExpanded;
     }
 
     @Override

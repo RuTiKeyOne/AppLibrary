@@ -1,10 +1,12 @@
 package com.example.applibrary;
 
 import android.content.Context;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +49,20 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
                 Toast.makeText(mContext, "You clicked", Toast.LENGTH_LONG).show();
             }
         });
+
+        holder.textAuthor.setText(books.get(position).getAuthor());
+        holder.textDescription.setText(books.get(position).getShortDesc());
+
+        if(books.get(position).isExpanded()){
+            TransitionManager.beginDelayedTransition(holder.parent);
+            holder.expendedRecLayout.setVisibility(View.VISIBLE);
+            holder.downArrow.setVisibility(View.GONE);
+        }
+        else{
+            TransitionManager.beginDelayedTransition(holder.parent);
+            holder.expendedRecLayout.setVisibility(View.GONE);
+            holder.downArrow.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -64,11 +80,39 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
         private ImageView imgBook;
         private TextView textName;
 
+        private ImageView upArrow, downArrow;
+        private TextView textAuthor, textDescription;
+        private RelativeLayout expendedRecLayout;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
             imgBook = itemView.findViewById(R.id.imgBook);
             textName = itemView.findViewById(R.id.textBookName);
+
+            downArrow = itemView.findViewById(R.id.downArrowButton);
+            upArrow = itemView.findViewById(R.id.upArrowButton);
+            textAuthor = itemView.findViewById(R.id.authorText);
+            textDescription = itemView.findViewById(R.id.shortDescText);
+            expendedRecLayout = itemView.findViewById(R.id.expandedRelLayout);
+
+            downArrow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Book book = books.get(getAdapterPosition());
+                    book.setExpanded(!book.isExpanded());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
+
+            upArrow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Book book = books.get(getAdapterPosition());
+                    book.setExpanded(!book.isExpanded());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
         }
     }
 
