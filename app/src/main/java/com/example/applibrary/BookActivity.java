@@ -2,6 +2,7 @@ package com.example.applibrary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 public class BookActivity extends AppCompatActivity {
+
+    public static final String BOOK_ID_KEY = "bookId";
 
     private TextView nameText, authorText, pagesText, descriptionText;
     private Button addToWantToReadBtn, addToAlreadyReadBtn, addToCurrentlyReadingBtn, addToFavouriteBtn;
@@ -20,9 +23,20 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
         initView();
-        Book book = new Book(1, "The Fight Club", "Chuck Palahniuk", 208, "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
-                "Fight Club is a 1996 novel by Chuck Palahniuk. It follows the experiences of an unnamed protagonist struggling with insomnia.", "In his debut novel, Chuck Palahniuk showed himself to be his generation's most visionary satirist. Fight Club's estranged narrator leaves his lackluster job when he comes under the thrall of Tyler Durden, an enigmatic young man who holds secret boxing matches in the basement of bars. There two men fight \"as long as they have to.\" A gloriously original work that exposes what is at the core of our modern world.");
-        setData(book);
+
+        Intent intent = getIntent();
+
+        if(null != intent){
+            int bookId = intent.getIntExtra(BOOK_ID_KEY, -1);
+
+            if(bookId != -1){
+                Book incomingBook = Utils.getInstance().getBookById(bookId);
+                if(null != incomingBook){
+                    setData(incomingBook);
+                }
+            }
+        }
+
     }
 
     private void setData(Book book) {
