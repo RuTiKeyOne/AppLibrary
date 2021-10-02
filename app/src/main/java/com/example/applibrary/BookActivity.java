@@ -34,14 +34,17 @@ public class BookActivity extends AppCompatActivity {
             int bookId = intent.getIntExtra(BOOK_ID_KEY, -1);
 
             if(bookId != -1){
-                Book incomingBook = Utils.getInstance().getBookById(bookId);
-                if(null != incomingBook){
+                Book incomingBook = null;
+                try {
+                    incomingBook = Utils.getInstance().getBookById(bookId);
                     setData(incomingBook);
-
                     handleFavouriteBooks(incomingBook);
                     handleCurrentlyReadingBooks(incomingBook);
                     handleAlreadyReadBooks(incomingBook);
                     handleWantToReadBooks(incomingBook);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
@@ -139,7 +142,7 @@ public class BookActivity extends AppCompatActivity {
 
         for(Book book : wantToReadBooks){
             if(book.getId() == incomingBook.getId()){
-                exitsWantToReadBooks = false;
+                exitsWantToReadBooks = true;
             }
         }
 

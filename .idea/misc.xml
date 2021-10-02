@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_allbooks.xml" value="0.371875" />
         <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_already_read_book_actiivity.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_book.xml" value="0.371875" />
         <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_currently_reading_books.xml" value="0.371875" />
         <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_favourite_books.xml" value="0.371875" />
+        <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_main.xml" value="0.371875" />
         <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_want_to_read.xml" value="0.371875" />
+        <entry key="..\:/Users/Dart/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/list_item_book.xml" value="0.371875" />
         <entry key="..\:/Users/rutikeyone/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_allbooks.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/rutikeyone/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_already_read_book_actiivity.xml" value="0.22418478260869565" />
         <entry key="..\:/Users/rutikeyone/AndroidStudioProjects/AppLibrary/app/src/main/res/layout/activity_book.xml" value="0.4" />

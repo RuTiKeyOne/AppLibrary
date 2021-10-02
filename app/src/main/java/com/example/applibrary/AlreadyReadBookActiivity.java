@@ -15,7 +15,7 @@ public class AlreadyReadBookActiivity extends AppCompatActivity {
         setContentView(R.layout.activity_already_read_book_actiivity);
 
         RecyclerView recyclerView = findViewById(R.id.recViewAlreadyReadBook);
-        BookRecViewAdapter adapter = new BookRecViewAdapter(this);
+        BookRecViewAdapter adapter = new BookRecViewAdapter(this, "alreadyRead");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter.setBooks(Utils.getAlreadyReadBooks());

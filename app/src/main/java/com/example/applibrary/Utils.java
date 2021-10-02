@@ -70,19 +70,20 @@ public class Utils {
         return favouriteBooks;
     }
 
-    public Book getBookById(int id){
+    public Book getBookById(int id) throws Exception {
         for(Book book : allBooks){
             if(book.getId() == id){
                 return book;
             }
         }
 
-        return null;
+        throw new Exception();
     }
 
     public boolean addToAlreadyReadBooks(Book book){
         return alreadyReadBooks.add(book);
     }
+
     public boolean addToWantToReadBooks(Book book){return wantToReadBooks.add(book);}
 
     public boolean addToFavouriteBooks(Book incomingBook) {return  favouriteBooks.add(incomingBook);
@@ -91,5 +92,15 @@ public class Utils {
     public boolean addToCurrentlyReadingBooks(Book incomingBook) {
         return currentlyReadingBook.add(incomingBook);
     }
+
+    public boolean removeFromAlreadyRead(Book book){
+        return alreadyReadBooks.remove(book);
+    }
+
+    public boolean removeFromWantToRead(Book book){return wantToReadBooks.remove(book);}
+
+    public boolean removeCurrentlyReading(Book book){return currentlyReadingBook.remove(book);}
+
+    public boolean removeFromFavourite(Book book){return favouriteBooks.remove(book);}
 
 }
