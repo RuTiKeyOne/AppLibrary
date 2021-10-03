@@ -1,10 +1,13 @@
 package com.example.applibrary;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +49,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CurrentlyReadingBooksActivity.class);
                 startActivity(intent);
+
+            }
+        });
+
+        aboutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle(getString(R.string.app_name));
+                builder.setMessage("Designed and Develop by Ershov Andrew at google)");
+                builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+                builder.setPositiveButton("Visit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(MainActivity.this, WebsiteActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                builder.create().show();
 
             }
         });
