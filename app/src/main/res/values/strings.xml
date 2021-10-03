@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">appLibrary</string>
+    <string name="app_name">My Library</string>
+    <string name="all_books_activity">All Books</string>
+    <string name="book_activity">Book Details</string>
+    <string name="already_book_activity">Books You Already Read</string>
+    <string name="favourite_books_activity">Favourite Books</string>
+    <string name="want_to_read_activity">Your Wish List</string>
+    <string name="currently_reading_activity">Books You Are Currently Reading</string>
+    <string name="about_activity">About</string>
 </resources>
