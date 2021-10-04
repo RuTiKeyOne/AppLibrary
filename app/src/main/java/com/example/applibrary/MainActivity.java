@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        yourWishlistBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WantToReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Utils.getInstance();
+        Utils.getInstance(this);
     }
 
     private void initView(){

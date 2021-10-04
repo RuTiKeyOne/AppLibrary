@@ -18,7 +18,7 @@ public class FavouriteBooksActivity extends AppCompatActivity {
         BookRecViewAdapter adapter = new BookRecViewAdapter(this, "favouriteBooks");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter.setBooks(Utils.getInstance().getFavouriteBooks());
+        adapter.setBooks(Utils.getInstance(this).getFavouriteBooks());
     }
 
     @Override
