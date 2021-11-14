@@ -1,4 +1,4 @@
-package com.example.applibrary;
+package com.example.applibrary.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,10 +19,14 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.applibrary.Activity.BookActivity;
+import com.example.applibrary.Model.Book;
+import com.example.applibrary.R;
+import com.example.applibrary.Util.Utils;
 
 import java.util.ArrayList;
 
-import static com.example.applibrary.BookActivity.BOOK_ID_KEY;
+import static com.example.applibrary.Activity.BookActivity.BOOK_ID_KEY;
 
 public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.ViewHolder> {
 

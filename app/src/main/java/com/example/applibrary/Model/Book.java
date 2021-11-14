@@ -1,4 +1,4 @@
-package com.example.applibrary;
+package com.example.applibrary.Model;
 
 public class Book {
     private int id;

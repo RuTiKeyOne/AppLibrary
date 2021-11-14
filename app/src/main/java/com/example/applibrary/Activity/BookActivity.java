@@ -1,4 +1,4 @@
-package com.example.applibrary;
+package com.example.applibrary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.applibrary.Model.Book;
+import com.example.applibrary.R;
+import com.example.applibrary.Util.Utils;
 
 import java.util.ArrayList;
 
@@ -126,7 +129,7 @@ public class BookActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if(Utils.getInstance(BookActivity.this).addToAlreadyReadBooks(incomingBook)){
                         Toast.makeText(BookActivity.this, "Book added", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(BookActivity.this, AlreadyReadBookActiivity.class);
+                        Intent intent = new Intent(BookActivity.this, AlreadyReadBookActivity.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(BookActivity.this, "Something wrong happened try again", Toast.LENGTH_LONG).show();

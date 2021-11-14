@@ -1,15 +1,14 @@
-package com.example.applibrary;
+package com.example.applibrary.Activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import java.util.ArrayList;
+import com.example.applibrary.Adapter.BookRecViewAdapter;
+import com.example.applibrary.R;
+import com.example.applibrary.Util.Utils;
 
 public class AllbooksActivity extends AppCompatActivity {
 

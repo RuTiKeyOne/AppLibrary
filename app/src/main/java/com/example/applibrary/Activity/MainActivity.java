@@ -1,4 +1,4 @@
-package com.example.applibrary;
+package com.example.applibrary.Activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.Button;
+
+import com.example.applibrary.R;
+import com.example.applibrary.Util.Utils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         alreadyReadBooksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AlreadyReadBookActiivity.class);
+                Intent intent = new Intent(MainActivity.this, AlreadyReadBookActivity.class);
                 startActivity(intent);
             }
         });

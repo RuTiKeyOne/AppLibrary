@@ -1,4 +1,4 @@
-package com.example.applibrary;
+package com.example.applibrary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,6 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.applibrary.Adapter.BookRecViewAdapter;
+import com.example.applibrary.R;
+import com.example.applibrary.Util.Utils;
 
 public class WantToReadActivity extends AppCompatActivity {
 
