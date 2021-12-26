@@ -4,10 +4,10 @@ The application library written java from android operating system.
 ## Screenshots
 
 <p align="center">
-  <img src="https://i.ibb.co/BzSqRLZ/device-2021-10-04-152312.png" width="200"/>
-  <img src="https://i.ibb.co/KxHYDsp/device-2021-10-04-152624.png" width="200"/>
-  <img src="https://i.ibb.co/T4JHw95/device-2021-10-04-152804.png" width="200"/>
-  <img src="https://i.ibb.co/8NKLM3S/device-2021-10-04-153621.png" width="200"/>
+  <img src="https://github.com/RuTiKeyOne/AppLibrary/blob/master/doc/Screenshots/1.png" width="200"/>
+  <img src="https://github.com/RuTiKeyOne/AppLibrary/blob/master/doc/Screenshots/2.png" width="200"/>
+  <img src="https://github.com/RuTiKeyOne/AppLibrary/blob/master/doc/Screenshots/3.png" width="200"/>
+  <img src="https://github.com/RuTiKeyOne/AppLibrary/blob/master/doc/Screenshots/4.png" width="200"/>
 </p>
 
  ## What functionality does the application provide to the user?
